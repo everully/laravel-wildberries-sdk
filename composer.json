@@ -1,0 +1,66 @@
+{
+    "name": "everully/laravel-wildberries-sdk",
+    "description": "Laravel Wildberries SDK",
+    "keywords": [
+        "wildberries",
+        "api",
+        "laravel",
+        "sdk",
+        "client",
+        "php",
+        "laravel 9",
+        "laravel 10",
+        "laravel 11"
+    ],
+    "homepage": "https://github.com/everully/laravel-wildberries-sdk",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Everully\\LaravelWildberriesSdk\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Everully\\LaravelWildberriesSdk\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Antonov Anton",
+            "email": "everully@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "illuminate/contracts": "^10.0|^11.0",
+        "spatie/laravel-package-tools": "^1.16",
+        "everully/php-wildberries-sdk": "^0.0.1"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.17",
+        "pestphp/pest": "^2.35"
+    },
+    "scripts": {
+        "test": "./vendor/bin/pest --no-coverage",
+        "test-coverage": "vendor/bin/pest --coverage-html coverage",
+        "pint": "./vendor/bin/pint"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Everully\\LaravelWildberriesSdk\\WildberriesServiceProvider"
+            ],
+            "aliases": {
+                "SlackApi": "Everully\\LaravelWildberriesSdk\\WildberriesFacade"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
